@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/61ba857e0b.js" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            $('i').click(function(){
+                $('ul').slideToggle()
+                $('.pp').fadeToggle()
+            })
+
+            $('#newBox').hide()
+            $('#list1, #box1').click(function(){
+                $('.newBox').css('transform','translateY(0px)')
+                $('#newBox').show()
+            })
+            $('#list2, #box2').click(function(){
+                $('.newBox').css('transform','translateY(-1060px)')
+                $('#newBox').show()
+            })
+            $('#list3, #box3').click(function(){
+                $('.newBox').css('transform','translateY(-2120px)')
+                $('#newBox').show()
+            })
+            $('#list4, #box4').click(function(){
+                $('.newBox').css('transform','translateY(-3180px)')
+                $('#newBox').show()
+            })
+
+
+            $('#newBox, button').click(function(){
+                $('#newBox').hide()
+            })
+        })
+
+    </script>
+    <script>
+
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; list-style: none;}
+        a { color: inherit; text-decoration: none;}
+
+        #wrap { margin: 0 auto; width: 100%; display: flex;}
+        
+        #left { width: 10%; background-color: aliceblue;}
+        i { font-size: 30px; margin: 30px;}
+        #left p { font-size: 80px; font-weight: bold; width: 500px; transform: rotate(-90deg); position: absolute; top: 250px; left: -200px; overflow: hidden;}
+        ul { background-color: aliceblue; display: none; width: 100%;}
+        h2 { padding: 20px 30px;}
+        ul li { padding: 10px 30px; width: 100%;}
+        li:hover { background-color: white; color: rgb(44, 56, 66); font-weight: bold; font-size: 18px; transition: 0.5s;}
+
+        #right { width: 90%; height: 100vh; padding: 30px; display: flex; flex-flow: row wrap; margin: 0 auto; background-color: rgb(188, 203, 216);}
+        .box { color: lightgray; position: relative; width: 40%; height: 300px; margin: 20px 70px; margin-top: 80px; border: 3px solid rgb(152, 174, 192); padding: 40px; background-color: aliceblue; box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);}
+        h3 { font-size: 25px;}
+        h5 { margin: 20px auto; font-size: 15px;}
+        .box p { width: 30%;}
+        .box video { width: 50%; height: 100%; position: absolute; top: 0; left: 280px; filter: drop-shadow(5px 0 3px rgba(0, 0, 0, 0.3)) saturate(0) opacity(0.5);}
+        .box:hover { color: rgb(36, 45, 53); transition: 1s;}
+        .box:hover .video { width: 70%; filter: saturate(1) opacity(1) drop-shadow(5px 0 3px rgba(0, 0, 0, 0.3)); transition: 1s;}
+
+
+        #newBox { width: 90%; height: 100vh; background-color: rgba(0, 0, 0, 0.7); position: absolute; top: 0; right: 0; overflow: hidden;}
+        .newBox { width: 50%; margin: 0 auto; padding: 100px 0; text-align: center; color: white;}
+        .newBox h3 { font-size: 2em;}
+        .newBox h5 { font-size: 1.3em;}
+        .newBox p { width: 70%; margin: 0 auto;}
+        #newBox video { width: 100%;  margin: 30px auto;}
+        button { font-size: 15px; border: none; width: 300px; padding: 20px; background-color: aliceblue; color: rgb(49, 58, 66); margin: 50px auto;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="left">
+            <i class="fa-solid fa-bars"></i>
+            <p class="pp">LEE's PAGE</p>
+            <div class="list">
+                
+                <ul><h2>MENU LIST</h2>
+                    <li id="list1"><a href="#box1">MENU1</a></li>
+                    <li id="list2"><a href="#box2">MENU2</a></li>
+                    <li id="list3"><a href="#box3">MENU3</a></li>
+                    <li id="list4"><a href="#box4">MENU4</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="right">
+            <div id="box1" class="box">
+                <h3>Sub Title 01</h3>
+                <h5>This is Lorem ipsum text.</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, eum quae? Tenetur non facere officia quae nobis</p>
+                <video src="vid/vid (1).mp4" class="video" loop onmouseover="this.play()" onmouseout="this.pause()"></video>
+            </div>
+            <div id="box2" class="box">
+                <h3>Sub Title 02</h3>
+                <h5>This is Lorem ipsum text.</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, eum quae? Tenetur non facere officia quae nobis</p>
+                <video src="vid/vid (2).mp4" class="video" loop onmouseover="this.play()" onmouseout="this.pause()"></video>
+            </div>
+            <div id="box3" class="box">
+                <h3>Sub Title 03</h3>
+                <h5>This is Lorem ipsum text.</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, eum quae? Tenetur non facere officia quae nobis</p>
+                <video src="vid/vid (3).mp4" class="video" loop onmouseover="this.play()" onmouseout="this.pause()"></video>
+            </div>
+            <div id="box4" class="box">
+                <h3>Sub Title 04</h3>
+                <h5>This is Lorem ipsum text.</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, eum quae? Tenetur non facere officia quae nobis</p>
+                <video src="vid/vid (4).mp4" class="video" loop onmouseover="this.play()" onmouseout="this.pause()"></video>
+            </div>
+        </div>
+    </div>
+    <div id="newBox">
+        <div class="newBox" id="newBox1">
+            <h3>Sub Title 01</h3>
+            <h5>This is Lorem ipsum text.</h5>
+            <video src="vid/vid (1).mp4" autoplay loop></video>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, eum quae? Tenetur non facere officia quae nobis</p>
+            <button>close</button>
+        </div>
+        <div class="newBox" id="newBox2">
+            <h3>Sub Title 02</h3>
+            <h5>This is Lorem ipsum text.</h5>
+            <video src="vid/vid (2).mp4" autoplay loop></video>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, eum quae? Tenetur non facere officia quae nobis</p>
+            <button>close</button>
+        </div>
+        <div class="newBox" id="newBox3">
+            <h3>Sub Title 03</h3>
+            <h5>This is Lorem ipsum text.</h5>
+            <video src="vid/vid (3).mp4" autoplay loop></video>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, eum quae? Tenetur non facere officia quae nobis</p>
+            <button>close</button>
+        </div>
+        <div class="newBox" id="newBox4">
+            <h3>Sub Title 04</h3>
+            <h5>This is Lorem ipsum text.</h5>
+            <video src="vid/vid (4).mp4" autoplay loop></video>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, eum quae? Tenetur non facere officia quae nobis</p>
+            <button>close</button>
+        </div>
+    </div>
+</body>
+</html>
